@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout1}">
+<head>
+    <meta charset="UTF-8">
+    <title>타임리프 예시</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">タイトル</th>
+            <th scope="col">内容</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="article:${#lists}">
+            <td th:text="${article.id}">1</td>
+            <td th:text="${article.title}"></td>
+            <td th:text="${article.content}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+

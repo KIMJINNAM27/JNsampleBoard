@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout1}">
+<div layout:fragment="content">
+    <form class="container" action="/articles/create" method="post">
+        <div class="mb-3">
+            <label class="form-label">タイトル</label>
+            <input type="text" class="form-control" name="title">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">内容</label>
+            <textarea class="form-control" rows="3" name="content"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">提出</button>
+    </form>
+</div>
+</html>
